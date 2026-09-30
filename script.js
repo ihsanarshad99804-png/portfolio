@@ -372,41 +372,6 @@ revealElements.forEach(function(el) {
 });
 
 // =============================================================
-// SKILL BARS
-// =============================================================
-var progressBars =
-    document.querySelectorAll('.progress-bar');
-
-var skillObserver =
-    new IntersectionObserver(function(entries) {
-
-        entries.forEach(function(entry) {
-
-            if (entry.isIntersecting) {
-
-                var bar = entry.target;
-
-                var width =
-                    bar.getAttribute('data-width');
-
-                if (width) {
-                    bar.style.width = width;
-                }
-
-                skillObserver.unobserve(bar);
-            }
-        });
-
-    }, {
-        threshold: 0.4
-    });
-
-progressBars.forEach(function(bar) {
-
-    skillObserver.observe(bar);
-});
-
-// =============================================================
 // CUSTOM CURSOR
 // =============================================================
 var cursor =
