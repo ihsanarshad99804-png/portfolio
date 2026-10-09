@@ -1,120 +1,309 @@
 // =============================================================
-// PROJECT DATA — 5 Projects × 6 Screenshots Each
+// PROJECT DATA — 7 PROJECTS
 // =============================================================
-const projectsData = [{
-    id: 'luxora',
-    name: 'Luxora — E-Commerce Store',
-    shortDesc: 'Modern e-commerce fashion store with curated collections and seamless shopping.',
-    desc: 'A full-featured fashion e-commerce platform with product browsing, filtering, quick-add carts, and a premium brand experience. Built with modern UI/UX principles.',
-    url: 'https://e-commerce-store-tcjo.vercel.app',
-    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
-    thumb: 'all projects pictures/1ss luxora.png',
-    screenshots: [
-        'all projects pictures/1ss luxora.png',
-        'all projects pictures/2nd ss luxora.png',
-        'all projects pictures/3rd ss luxora.png',
-        'all projects pictures/4ry ss luxora.png',
-        'all projects pictures/5th ss luxora.png',
-        'all projects pictures/6th ss luxora.png'
-    ]
-}, {
-    id: 'ember-ivy',
-    name: 'Ember & Ivy — Restaurant',
-    shortDesc: 'Contemporary grill with fire-kissed ingredients and unforgettable dining.',
-    desc: 'A premium restaurant website showcasing signature dishes, menu exploration, online reservations, and a vibrant brand identity for a contemporary grill in downtown New York.',
-    url: 'https://ember-ivy-resturent.vercel.app',
-    tech: ['React', 'Next.js', 'CSS Modules', 'Framer Motion'],
-    thumb: 'all projects pictures/1st ss ember-ivy-resturent.png',
-    screenshots: [
-        'all projects pictures/1st ss ember-ivy-resturent.png',
-        'all projects pictures/2nd ss ember-ivy-resturent.png',
-        'all projects pictures/3nd ss ember-ivy-resturent.png',
-        'all projects pictures/4nd ss ember-ivy-resturent.png',
-        'all projects pictures/5nd ss ember-ivy-resturent.png',
-        'all projects pictures/6nd ss ember-ivy-resturent.png'
-    ]
-}, {
-    id: 'taskflow',
-    name: 'TaskFlow — Dashboard',
-    shortDesc: 'Collaborative task management with workspace productivity tracking.',
-    desc: 'A full-featured task management dashboard with project boards, team directories, calendar views, notifications, and real-time productivity analytics for modern teams.',
-    url: 'https://taskflow-dashboard-mu-woad.vercel.app',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-    thumb: 'all projects pictures/1st ss taskflow.png',
-    screenshots: [
-        'all projects pictures/1st ss taskflow.png',
-        'all projects pictures/2st ss taskflow.png',
-        'all projects pictures/3st ss taskflow.png',
-        'all projects pictures/4st ss taskflow.png',
-        'all projects pictures/5st ss taskflow.png',
-        'all projects pictures/6st ss taskflow.png'
-    ]
-}, {
-    id: 'medicarex',
-    name: 'MedicareX — Healthcare',
-    shortDesc: 'Healthcare platform connecting patients with trusted doctors and specialists.',
-    desc: 'A comprehensive healthcare platform that helps patients find the right doctors, compare specialties, read reviews, and schedule appointments with ease across multiple cities.',
-    url: 'https://medicarex-omega.vercel.app',
-    tech: ['React', 'Node.js', 'TypeScript', 'Tailwind'],
-    thumb: 'all projects pictures/1ss medicarex.png',
-    screenshots: [
-        'all projects pictures/1ss medicarex.png',
-        'all projects pictures/2ss medicarex.png',
-        'all projects pictures/3ss medicarex.png',
-        'all projects pictures/4ss medicarex.png',
-        'all projects pictures/5ss medicarex.png',
-        'all projects pictures/6ss medicarex.png'
-    ]
-}, {
-    id: 'propertyhub',
-    name: 'PropertyHub — Real Estate',
-    shortDesc: 'Marketplace for discovering exceptional homes and investment opportunities.',
-    desc: 'A modern real estate marketplace with property listings, advanced search filters, saved shortlists, agent profiles, and a clean user dashboard for home seekers and investors.',
-    url: 'https://propertyhub-liard.vercel.app',
-    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
-    thumb: 'all projects pictures/1ss propertry hub.png',
-    screenshots: [
-        'all projects pictures/1ss propertry hub.png',
-        'all projects pictures/2ss propertry hub.png',
-        'all projects pictures/3ss propertry hub.png',
-        'all projects pictures/4ss propertry hub.png',
-        'all projects pictures/5ss propertry hub.png',
-        'all projects pictures/6ss propertry hub.png'
-    ]
-}];
+
+const projectsData = [
+
+    {
+        id: 'luxora',
+
+        name: 'Luxora — E-Commerce Store',
+
+        shortDesc:
+            'Modern e-commerce fashion store with curated collections and seamless shopping.',
+
+        desc:
+            'A full-featured fashion e-commerce platform with product browsing, filtering, quick-add carts, and a premium brand experience. Built with modern UI/UX principles.',
+
+        url:
+            'https://e-commerce-store-tcjo.vercel.app',
+
+        tech: [
+            'React',
+            'Next.js',
+            'TypeScript',
+            'Tailwind'
+        ],
+
+        thumb:
+            'all projects pictures/1ss luxora.png',
+
+        screenshots: [
+            'all projects pictures/1ss luxora.png',
+            'all projects pictures/2nd ss luxora.png',
+            'all projects pictures/3rd ss luxora.png',
+            'all projects pictures/4ry ss luxora.png',
+            'all projects pictures/5th ss luxora.png',
+            'all projects pictures/6th ss luxora.png'
+        ]
+    },
+
+    {
+        id: 'ember-ivy',
+
+        name: 'Ember & Ivy — Restaurant',
+
+        shortDesc:
+            'Contemporary grill with fire-kissed ingredients and unforgettable dining.',
+
+        desc:
+            'A premium restaurant website showcasing signature dishes, menu exploration, online reservations, and a vibrant brand identity for a contemporary grill in downtown New York.',
+
+        url:
+            'https://ember-ivy-resturent.vercel.app',
+
+        tech: [
+            'React',
+            'Next.js',
+            'CSS Modules',
+            'Framer Motion'
+        ],
+
+        thumb:
+            'all projects pictures/1st ss ember-ivy-resturent.png',
+
+        screenshots: [
+            'all projects pictures/1st ss ember-ivy-resturent.png',
+            'all projects pictures/2nd ss ember-ivy-resturent.png',
+            'all projects pictures/3nd ss ember-ivy-resturent.png',
+            'all projects pictures/4nd ss ember-ivy-resturent.png',
+            'all projects pictures/5nd ss ember-ivy-resturent.png',
+            'all projects pictures/6nd ss ember-ivy-resturent.png'
+        ]
+    },
+
+    {
+        id: 'taskflow',
+
+        name: 'TaskFlow — Dashboard',
+
+        shortDesc:
+            'Collaborative task management with workspace productivity tracking.',
+
+        desc:
+            'A full-featured task management dashboard with project boards, team directories, calendar views, notifications, and real-time productivity analytics for modern teams.',
+
+        url:
+            'https://taskflow-dashboard-mu-woad.vercel.app',
+
+        tech: [
+            'React',
+            'Node.js',
+            'Express',
+            'MongoDB'
+        ],
+
+        thumb:
+            'all projects pictures/1st ss taskflow.png',
+
+        screenshots: [
+            'all projects pictures/1st ss taskflow.png',
+            'all projects pictures/2st ss taskflow.png',
+            'all projects pictures/3st ss taskflow.png',
+            'all projects pictures/4st ss taskflow.png',
+            'all projects pictures/5st ss taskflow.png',
+            'all projects pictures/6st ss taskflow.png'
+        ]
+    },
+
+    {
+        id: 'medicarex',
+
+        name: 'MedicareX — Healthcare',
+
+        shortDesc:
+            'Healthcare platform connecting patients with trusted doctors and specialists.',
+
+        desc:
+            'A comprehensive healthcare platform that helps patients find the right doctors, compare specialties, read reviews, and schedule appointments with ease across multiple cities.',
+
+        url:
+            'https://medicarex-omega.vercel.app',
+
+        tech: [
+            'React',
+            'Node.js',
+            'TypeScript',
+            'Tailwind'
+        ],
+
+        thumb:
+            'all projects pictures/1ss medicarex.png',
+
+        screenshots: [
+            'all projects pictures/1ss medicarex.png',
+            'all projects pictures/2ss medicarex.png',
+            'all projects pictures/3ss medicarex.png',
+            'all projects pictures/4ss medicarex.png',
+            'all projects pictures/5ss medicarex.png',
+            'all projects pictures/6ss medicarex.png'
+        ]
+    },
+
+    {
+        id: 'propertyhub',
+
+        name: 'PropertyHub — Real Estate',
+
+        shortDesc:
+            'Marketplace for discovering exceptional homes and investment opportunities.',
+
+        desc:
+            'A modern real estate marketplace with property listings, advanced search filters, saved shortlists, agent profiles, and a clean user dashboard for home seekers and investors.',
+
+        url:
+            'https://propertyhub-liard.vercel.app',
+
+        tech: [
+            'React',
+            'Next.js',
+            'TypeScript',
+            'Tailwind'
+        ],
+
+        thumb:
+            'all projects pictures/1ss propertry hub.png',
+
+        screenshots: [
+            'all projects pictures/1ss propertry hub.png',
+            'all projects pictures/2ss propertry hub.png',
+            'all projects pictures/3ss propertry hub.png',
+            'all projects pictures/4ss propertry hub.png',
+            'all projects pictures/5ss propertry hub.png',
+            'all projects pictures/6ss propertry hub.png'
+        ]
+    },
+
+    // =========================================================
+    // PROJECT 6 — ARVEN
+    // =========================================================
+
+    {
+        id: 'arven',
+
+        name: 'ARVEN — Fashion Branding',
+
+        shortDesc:
+            'Fashion branding and visual identity project with a refined creative direction.',
+
+        desc:
+            'A complete fashion branding concept focused on visual identity, campaign direction, brand presentation, and a refined premium aesthetic.',
+
+        url:
+            '',
+
+        tech: [
+            'Brand Identity',
+            'Fashion Branding',
+            'Campaign Design',
+            'Graphic Design'
+        ],
+
+        // CORRECTED IMAGE PATH
+        thumb:
+            'all projects pictures/ARVEN branding.png.png',
+
+        // CORRECTED GALLERY IMAGE PATH
+        screenshots: [
+            'all projects pictures/ARVEN branding.png.png'
+        ],
+
+        type:
+            'design'
+    },
+
+    // =========================================================
+    // PROJECT 7 — ROAST & FORM
+    // =========================================================
+
+    {
+        id: 'roast-form',
+
+        name: 'ROAST & FORM — Coffee Branding',
+
+        shortDesc:
+            'Specialty coffee branding with a distinctive and modern visual identity.',
+
+        desc:
+            'A specialty coffee branding project combining brand identity, packaging direction, print design, and a distinctive modern visual system.',
+
+        url:
+            '',
+
+        tech: [
+            'Brand Identity',
+            'Coffee Branding',
+            'Packaging Design',
+            'Print Design'
+        ],
+
+        // CORRECTED IMAGE PATH
+        thumb:
+            'all projects pictures/ROAST & FORM branding.png.png',
+
+        // CORRECTED GALLERY IMAGE PATH
+        screenshots: [
+            'all projects pictures/ROAST & FORM branding.png.png'
+        ],
+
+        type:
+            'design'
+    }
+
+];
+
 
 // =============================================================
 // RENDER PROJECT CARDS
 // =============================================================
-const grid = document.getElementById('projectsGrid');
 
-projectsData.forEach((p, idx) => {
-    const card = document.createElement('div');
-    card.className = 'project-card reveal';
+const grid =
+    document.getElementById('projectsGrid');
 
-    if (idx === 1) card.classList.add('delay-1');
-    if (idx === 2) card.classList.add('delay-2');
 
-    card.innerHTML = `
-        <div class="project-image-wrap">
-            <img src="${p.thumb}" alt="${p.name}" loading="lazy" />
-            <span class="project-badge">Project ${idx + 1}</span>
-        </div>
+projectsData.forEach(function(p, idx) {
 
-        <div class="project-meta">
-            <h3>${p.name}</h3>
+    const card =
+        document.createElement('div');
 
-            <p>${p.shortDesc}</p>
 
-            <div class="project-tech">
-                ${p.tech.map(t => `<span>${t}</span>`).join('')}
-            </div>
+    card.className =
+        'project-card reveal';
 
-            <div class="project-actions">
-                <button class="btn-sm" data-project="${p.id}">
-                    View Gallery
-                </button>
 
+    // Add design class to ARVEN and ROAST & FORM
+    if (p.type === 'design') {
+
+        card.classList.add(
+            'design-project'
+        );
+
+    }
+
+
+    // Existing animation delays
+    if (idx === 1) {
+
+        card.classList.add(
+            'delay-1'
+        );
+
+    }
+
+
+    if (idx === 2) {
+
+        card.classList.add(
+            'delay-2'
+        );
+
+    }
+
+
+    // Live Demo only for web projects
+    const liveDemo =
+        p.url
+            ? `
                 <a
                     href="${p.url}"
                     target="_blank"
@@ -123,561 +312,1231 @@ projectsData.forEach((p, idx) => {
                 >
                     Live Demo →
                 </a>
-            </div>
+            `
+            : '';
+
+
+    card.innerHTML = `
+
+        <div class="project-image-wrap">
+
+            <img
+                src="${p.thumb}"
+                alt="${p.name}"
+                loading="lazy"
+            />
+
+            <span class="project-badge">
+                Project ${idx + 1}
+            </span>
+
         </div>
+
+
+        <div class="project-meta">
+
+            <h3>
+                ${p.name}
+            </h3>
+
+
+            <p>
+                ${p.shortDesc}
+            </p>
+
+
+            <div class="project-tech">
+
+                ${p.tech
+                    .map(function(t) {
+
+                        return `<span>${t}</span>`;
+
+                    })
+                    .join('')
+                }
+
+            </div>
+
+
+            <div class="project-actions">
+
+                <button
+                    class="btn-sm"
+                    data-project="${p.id}"
+                >
+                    View Gallery
+                </button>
+
+                ${liveDemo}
+
+            </div>
+
+        </div>
+
     `;
 
-    card.querySelector('[data-project]').addEventListener('click', (e) => {
-        e.stopPropagation();
-        openGallery(p.id);
-    });
 
-    card.addEventListener('click', (e) => {
-        if (e.target.closest('a') || e.target.closest('button')) return;
-        openGallery(p.id);
-    });
+    const galleryButton =
+        card.querySelector(
+            '[data-project]'
+        );
+
+
+    galleryButton.addEventListener(
+        'click',
+        function(e) {
+
+            e.stopPropagation();
+
+            openGallery(p.id);
+
+        }
+    );
+
+
+    card.addEventListener(
+        'click',
+        function(e) {
+
+            if (
+                e.target.closest('a') ||
+                e.target.closest('button')
+            ) {
+
+                return;
+
+            }
+
+
+            openGallery(p.id);
+
+        }
+    );
+
 
     grid.appendChild(card);
+
 });
+
 
 // =============================================================
 // GALLERY LOGIC
 // =============================================================
+
 let currentProject = null;
+
 let currentIndex = 0;
 
-const modal = document.getElementById('projectModal');
-const track = document.getElementById('modalTrack');
-const title = document.getElementById('modalTitle');
-const desc = document.getElementById('modalDesc');
-const counter = document.getElementById('modalCounter');
-const prevBtn = document.getElementById('modalPrev');
-const nextBtn = document.getElementById('modalNext');
-const closeBtn = document.getElementById('modalCloseBtn');
-const liveLink = document.getElementById('modalLiveLink');
+
+const modal =
+    document.getElementById(
+        'projectModal'
+    );
+
+
+const track =
+    document.getElementById(
+        'modalTrack'
+    );
+
+
+const title =
+    document.getElementById(
+        'modalTitle'
+    );
+
+
+const desc =
+    document.getElementById(
+        'modalDesc'
+    );
+
+
+const counter =
+    document.getElementById(
+        'modalCounter'
+    );
+
+
+const prevBtn =
+    document.getElementById(
+        'modalPrev'
+    );
+
+
+const nextBtn =
+    document.getElementById(
+        'modalNext'
+    );
+
+
+const closeBtn =
+    document.getElementById(
+        'modalCloseBtn'
+    );
+
+
+const liveLink =
+    document.getElementById(
+        'modalLiveLink'
+    );
+
+
+// =============================================================
+// OPEN GALLERY
+// =============================================================
 
 function openGallery(projectId) {
 
-    const proj = projectsData.find(p => p.id === projectId);
+    const proj =
+        projectsData.find(
+            function(p) {
 
-    if (!proj) return;
+                return p.id === projectId;
 
-    currentProject = proj;
-    currentIndex = 0;
+            }
+        );
 
-    renderGallery(proj);
 
-    modal.classList.add('show');
+    if (!proj) {
 
-    document.body.style.overflow = 'hidden';
+        return;
+
+    }
+
+
+    currentProject =
+        proj;
+
+
+    currentIndex =
+        0;
+
+
+    renderGallery(
+        proj
+    );
+
+
+    modal.classList.add(
+        'show'
+    );
+
+
+    document.body.style.overflow =
+        'hidden';
+
 
     updateControls();
+
 }
+
+
+// =============================================================
+// CLOSE GALLERY
+// =============================================================
 
 function closeGallery() {
 
-    modal.classList.remove('show');
+    modal.classList.remove(
+        'show'
+    );
 
-    document.body.style.overflow = '';
+
+    document.body.style.overflow =
+        '';
+
 }
+
+
+// =============================================================
+// RENDER GALLERY
+// =============================================================
 
 function renderGallery(proj) {
 
-    title.textContent = proj.name;
+    title.textContent =
+        proj.name;
 
-    desc.textContent = proj.desc;
 
-    liveLink.href = proj.url;
+    desc.textContent =
+        proj.desc;
 
-    track.innerHTML = '';
 
-    proj.screenshots.forEach((src) => {
+    // Web projects show Live Demo
+    if (proj.url) {
 
-        const slide = document.createElement('div');
+        liveLink.href =
+            proj.url;
 
-        slide.className = 'modal-slide';
 
-        const img = document.createElement('img');
+        liveLink.style.display =
+            'inline-flex';
 
-        img.src = src;
+    }
 
-        img.alt = proj.name + ' screenshot';
+    // Graphic design projects hide Live Demo
+    else {
 
-        img.loading = 'lazy';
+        liveLink.removeAttribute(
+            'href'
+        );
 
-        slide.appendChild(img);
 
-        track.appendChild(slide);
-    });
+        liveLink.style.display =
+            'none';
 
-    currentIndex = 0;
+    }
+
+
+    track.innerHTML =
+        '';
+
+
+    proj.screenshots.forEach(
+        function(src) {
+
+            const slide =
+                document.createElement(
+                    'div'
+                );
+
+
+            slide.className =
+                'modal-slide';
+
+
+            const img =
+                document.createElement(
+                    'img'
+                );
+
+
+            img.src =
+                src;
+
+
+            img.alt =
+                proj.name +
+                ' screenshot';
+
+
+            img.loading =
+                'lazy';
+
+
+            slide.appendChild(
+                img
+            );
+
+
+            track.appendChild(
+                slide
+            );
+
+        }
+    );
+
+
+    currentIndex =
+        0;
+
 
     updateTrack();
 
+
     updateControls();
+
 }
+
+
+// =============================================================
+// UPDATE GALLERY TRACK
+// =============================================================
 
 function updateTrack() {
 
-    const slides = track.querySelectorAll('.modal-slide');
+    const slides =
+        track.querySelectorAll(
+            '.modal-slide'
+        );
 
-    if (slides.length === 0) return;
+
+    if (!slides.length) {
+
+        return;
+
+    }
+
 
     track.style.transform =
-        'translateX(-' + (currentIndex * 100) + '%)';
+        'translateX(-' +
+        (
+            currentIndex * 100
+        ) +
+        '%)';
+
 
     counter.textContent =
-        (currentIndex + 1) + ' / ' + slides.length;
+        (
+            currentIndex + 1
+        ) +
+        ' / ' +
+        slides.length;
+
 }
+
+
+// =============================================================
+// UPDATE CONTROLS
+// =============================================================
 
 function updateControls() {
 
-    const slides = track.querySelectorAll('.modal-slide');
+    const slides =
+        track.querySelectorAll(
+            '.modal-slide'
+        );
 
-    prevBtn.disabled = currentIndex === 0;
+
+    prevBtn.disabled =
+        currentIndex === 0;
+
 
     nextBtn.disabled =
-        currentIndex === slides.length - 1;
+        currentIndex ===
+        slides.length - 1;
+
+
+    if (slides.length <= 1) {
+
+        prevBtn.disabled =
+            true;
+
+
+        nextBtn.disabled =
+            true;
+
+    }
+
 }
+
+
+// =============================================================
+// PREVIOUS
+// =============================================================
 
 function goPrev() {
 
-    if (currentIndex > 0) {
+    if (
+        currentIndex > 0
+    ) {
 
         currentIndex--;
 
+
         updateTrack();
 
+
         updateControls();
+
     }
+
 }
+
+
+// =============================================================
+// NEXT
+// =============================================================
 
 function goNext() {
 
     const slides =
-        track.querySelectorAll('.modal-slide');
+        track.querySelectorAll(
+            '.modal-slide'
+        );
 
-    if (currentIndex < slides.length - 1) {
+
+    if (
+        currentIndex <
+        slides.length - 1
+    ) {
 
         currentIndex++;
 
+
         updateTrack();
 
+
         updateControls();
+
     }
+
 }
 
-prevBtn.addEventListener('click', goPrev);
 
-nextBtn.addEventListener('click', goNext);
+// =============================================================
+// GALLERY EVENTS
+// =============================================================
 
-closeBtn.addEventListener('click', closeGallery);
+prevBtn.addEventListener(
+    'click',
+    goPrev
+);
 
-modal.addEventListener('click', function(e) {
 
-    if (e.target === modal) {
-        closeGallery();
+nextBtn.addEventListener(
+    'click',
+    goNext
+);
+
+
+closeBtn.addEventListener(
+    'click',
+    closeGallery
+);
+
+
+modal.addEventListener(
+    'click',
+    function(e) {
+
+        if (
+            e.target === modal
+        ) {
+
+            closeGallery();
+
+        }
+
     }
-});
+);
 
-document.addEventListener('keydown', function(e) {
 
-    if (!modal.classList.contains('show')) return;
+document.addEventListener(
+    'keydown',
+    function(e) {
 
-    if (e.key === 'Escape') {
-        closeGallery();
+        if (
+            !modal.classList.contains(
+                'show'
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            e.key === 'Escape'
+        ) {
+
+            closeGallery();
+
+        }
+
+
+        if (
+            e.key === 'ArrowLeft'
+        ) {
+
+            goPrev();
+
+        }
+
+
+        if (
+            e.key === 'ArrowRight'
+        ) {
+
+            goNext();
+
+        }
+
     }
+);
 
-    if (e.key === 'ArrowLeft') {
-        goPrev();
-    }
-
-    if (e.key === 'ArrowRight') {
-        goNext();
-    }
-});
 
 // =============================================================
 // NAVBAR SCROLL
 // =============================================================
-var navbar = document.getElementById('navbar');
+
+var navbar =
+    document.getElementById(
+        'navbar'
+    );
+
 
 function handleNavbar() {
 
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+    if (
+        window.scrollY > 50
+    ) {
+
+        navbar.classList.add(
+            'scrolled'
+        );
+
     }
+
+    else {
+
+        navbar.classList.remove(
+            'scrolled'
+        );
+
+    }
+
 }
 
-window.addEventListener('scroll', handleNavbar);
+
+window.addEventListener(
+    'scroll',
+    handleNavbar
+);
+
 
 handleNavbar();
+
 
 // =============================================================
 // MOBILE MENU
 // =============================================================
-var menuBtn = document.getElementById('menuBtn');
+
+var menuBtn =
+    document.getElementById(
+        'menuBtn'
+    );
+
 
 var navLinks =
-    document.getElementById('navLinks');
+    document.getElementById(
+        'navLinks'
+    );
 
-menuBtn.addEventListener('click', function() {
 
-    navLinks.classList.toggle('open');
+menuBtn.addEventListener(
+    'click',
+    function() {
 
-    menuBtn.textContent =
-        navLinks.classList.contains('open')
-            ? '✕'
-            : '☰';
-});
+        navLinks.classList.toggle(
+            'open'
+        );
 
-navLinks.querySelectorAll('a').forEach(function(link) {
 
-    link.addEventListener('click', function() {
+        menuBtn.textContent =
+            navLinks.classList.contains(
+                'open'
+            )
+                ? '✕'
+                : '☰';
 
-        navLinks.classList.remove('open');
+    }
+);
 
-        menuBtn.textContent = '☰';
-    });
-});
+
+navLinks
+    .querySelectorAll('a')
+    .forEach(
+        function(link) {
+
+            link.addEventListener(
+                'click',
+                function() {
+
+                    navLinks.classList.remove(
+                        'open'
+                    );
+
+
+                    menuBtn.textContent =
+                        '☰';
+
+                }
+            );
+
+        }
+    );
+
 
 // =============================================================
 // SCROLL REVEAL
 // =============================================================
+
 var revealElements =
-    document.querySelectorAll('.reveal');
+    document.querySelectorAll(
+        '.reveal'
+    );
+
 
 var revealObserver =
-    new IntersectionObserver(function(entries) {
+    new IntersectionObserver(
+        function(entries) {
 
-        entries.forEach(function(entry) {
+            entries.forEach(
+                function(entry) {
 
-            if (entry.isIntersecting) {
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-                entry.target.classList.add('active');
+                        entry.target.classList.add(
+                            'active'
+                        );
 
-                revealObserver.unobserve(entry.target);
-            }
-        });
 
-    }, {
-        threshold: 0.12
-    });
+                        revealObserver.unobserve(
+                            entry.target
+                        );
 
-revealElements.forEach(function(el) {
+                    }
 
-    revealObserver.observe(el);
-});
+                }
+            );
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach(
+    function(el) {
+
+        revealObserver.observe(
+            el
+        );
+
+    }
+);
+
 
 // =============================================================
 // CUSTOM CURSOR
 // =============================================================
-var cursor =
-    document.getElementById('cursor');
 
-if (cursor && window.innerWidth > 650) {
+var cursor =
+    document.getElementById(
+        'cursor'
+    );
+
+
+if (
+    cursor &&
+    window.innerWidth > 650
+) {
 
     var mouseX = 0;
+
     var mouseY = 0;
 
     var currentX = 0;
+
     var currentY = 0;
 
-    document.addEventListener('mousemove', function(e) {
 
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
+    document.addEventListener(
+        'mousemove',
+        function(e) {
+
+            mouseX =
+                e.clientX;
+
+            mouseY =
+                e.clientY;
+
+        }
+    );
+
 
     function animateCursor() {
 
         currentX +=
-            (mouseX - currentX) * 0.15;
+            (
+                mouseX -
+                currentX
+            ) *
+            0.15;
+
 
         currentY +=
-            (mouseY - currentY) * 0.15;
+            (
+                mouseY -
+                currentY
+            ) *
+            0.15;
+
 
         cursor.style.left =
-            currentX + 'px';
+            currentX +
+            'px';
+
 
         cursor.style.top =
-            currentY + 'px';
+            currentY +
+            'px';
 
-        requestAnimationFrame(animateCursor);
+
+        requestAnimationFrame(
+            animateCursor
+        );
+
     }
 
+
     animateCursor();
+
 
     document
         .querySelectorAll(
             'a, button, .service, .skill, .platform, .hobby, .edu-card, .about-card, .project-card'
         )
-        .forEach(function(el) {
+        .forEach(
+            function(el) {
 
-            el.addEventListener(
-                'mouseenter',
-                function() {
-                    cursor.classList.add('hover');
-                }
-            );
+                el.addEventListener(
+                    'mouseenter',
+                    function() {
 
-            el.addEventListener(
-                'mouseleave',
-                function() {
-                    cursor.classList.remove('hover');
-                }
-            );
-        });
+                        cursor.classList.add(
+                            'hover'
+                        );
+
+                    }
+                );
+
+
+                el.addEventListener(
+                    'mouseleave',
+                    function() {
+
+                        cursor.classList.remove(
+                            'hover'
+                        );
+
+                    }
+                );
+
+            }
+        );
+
 }
+
 
 // =============================================================
 // SMOOTH SCROLL
 // =============================================================
+
 document
-    .querySelectorAll('a[href^="#"]')
-    .forEach(function(link) {
+    .querySelectorAll(
+        'a[href^="#"]'
+    )
+    .forEach(
+        function(link) {
 
-        link.addEventListener('click', function(e) {
+            link.addEventListener(
+                'click',
+                function(e) {
 
-            var targetId =
-                link.getAttribute('href');
+                    var targetId =
+                        link.getAttribute(
+                            'href'
+                        );
 
-            if (!targetId || targetId === '#') {
-                return;
-            }
 
-            var target =
-                document.querySelector(targetId);
+                    if (
+                        !targetId ||
+                        targetId === '#'
+                    ) {
 
-            if (!target) {
-                return;
-            }
+                        return;
 
-            e.preventDefault();
+                    }
 
-            var offset =
-                navbar
-                    ? navbar.offsetHeight
-                    : 0;
 
-            var pos =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                offset;
+                    var target =
+                        document.querySelector(
+                            targetId
+                        );
 
-            window.scrollTo({
-                top: pos,
-                behavior: 'smooth'
-            });
-        });
-    });
+
+                    if (!target) {
+
+                        return;
+
+                    }
+
+
+                    e.preventDefault();
+
+
+                    var offset =
+                        navbar
+                            ? navbar.offsetHeight
+                            : 0;
+
+
+                    var pos =
+                        target
+                            .getBoundingClientRect()
+                            .top +
+                        window.scrollY -
+                        offset;
+
+
+                    window.scrollTo(
+                        {
+                            top: pos,
+                            behavior: 'smooth'
+                        }
+                    );
+
+                }
+            );
+
+        }
+    );
+
 
 // =============================================================
 // ACTIVE NAV
 // =============================================================
+
 var sections =
-    document.querySelectorAll('main section[id]');
+    document.querySelectorAll(
+        'main section[id]'
+    );
+
 
 var navAnchors =
     document.querySelectorAll(
         '.nav-links a[href^="#"]'
     );
 
+
 var activeObserver =
-    new IntersectionObserver(function(entries) {
+    new IntersectionObserver(
+        function(entries) {
 
-        entries.forEach(function(entry) {
+            entries.forEach(
+                function(entry) {
 
-            if (!entry.isIntersecting) {
-                return;
-            }
+                    if (
+                        !entry.isIntersecting
+                    ) {
 
-            var id =
-                entry.target.getAttribute('id');
+                        return;
 
-            navAnchors.forEach(function(link) {
+                    }
 
-                link.classList.toggle(
-                    'active-link',
-                    link.getAttribute('href') === '#' + id
-                );
-            });
-        });
 
-    }, {
-        rootMargin: '-30% 0px -60% 0px'
-    });
+                    var id =
+                        entry.target.getAttribute(
+                            'id'
+                        );
 
-sections.forEach(function(s) {
 
-    activeObserver.observe(s);
-});
+                    navAnchors.forEach(
+                        function(link) {
+
+                            link.classList.toggle(
+                                'active-link',
+                                link.getAttribute(
+                                    'href'
+                                ) ===
+                                '#' + id
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+        },
+        {
+            rootMargin:
+                '-30% 0px -60% 0px'
+        }
+    );
+
+
+sections.forEach(
+    function(s) {
+
+        activeObserver.observe(
+            s
+        );
+
+    }
+);
+
 
 // =============================================================
 // CONTACT FORM
 // =============================================================
+
 var contactForm =
-    document.getElementById('contactForm');
+    document.getElementById(
+        'contactForm'
+    );
 
-contactForm.addEventListener('submit', function(e) {
 
-    e.preventDefault();
+contactForm.addEventListener(
+    'submit',
+    function(e) {
 
-    var btn =
-        contactForm.querySelector('button');
+        e.preventDefault();
 
-    var original =
-        btn.innerHTML;
 
-    btn.innerHTML =
-        '✓ Message Sent!';
+        var btn =
+            contactForm.querySelector(
+                'button'
+            );
 
-    btn.style.pointerEvents =
-        'none';
 
-    btn.style.opacity =
-        '0.8';
+        var original =
+            btn.innerHTML;
 
-    contactForm.reset();
-
-    setTimeout(function() {
 
         btn.innerHTML =
-            original;
+            '✓ Message Sent!';
+
 
         btn.style.pointerEvents =
-            'auto';
+            'none';
+
 
         btn.style.opacity =
-            '1';
+            '0.8';
 
-    }, 2800);
-});
+
+        contactForm.reset();
+
+
+        setTimeout(
+            function() {
+
+                btn.innerHTML =
+                    original;
+
+
+                btn.style.pointerEvents =
+                    'auto';
+
+
+                btn.style.opacity =
+                    '1';
+
+            },
+            2800
+        );
+
+    }
+);
+
 
 // =============================================================
 // 3D TILT
 // =============================================================
+
 var tiltCards =
     document.querySelectorAll(
         '.service, .platform, .hobby, .edu-card, .project-card, .contact-info-card'
     );
 
-if (window.innerWidth > 900) {
 
-    tiltCards.forEach(function(card) {
+if (
+    window.innerWidth > 900
+) {
 
-        card.addEventListener(
-            'mousemove',
-            function(e) {
+    tiltCards.forEach(
+        function(card) {
 
-                var rect =
-                    card.getBoundingClientRect();
+            card.addEventListener(
+                'mousemove',
+                function(e) {
 
-                var x =
-                    e.clientX - rect.left;
+                    var rect =
+                        card.getBoundingClientRect();
 
-                var y =
-                    e.clientY - rect.top;
 
-                var cx =
-                    rect.width / 2;
+                    var x =
+                        e.clientX -
+                        rect.left;
 
-                var cy =
-                    rect.height / 2;
 
-                var rx =
-                    ((y - cy) / cy) * -4;
+                    var y =
+                        e.clientY -
+                        rect.top;
 
-                var ry =
-                    ((x - cx) / cx) * 4;
 
-                card.style.transform =
-                    'translateY(-6px) perspective(800px) rotateX(' +
-                    rx +
-                    'deg) rotateY(' +
-                    ry +
-                    'deg) scale(1.01)';
-            }
-        );
+                    var cx =
+                        rect.width / 2;
 
-        card.addEventListener(
-            'mouseleave',
-            function() {
 
-                card.style.transform = '';
-            }
-        );
-    });
+                    var cy =
+                        rect.height / 2;
+
+
+                    var rx =
+                        (
+                            (y - cy) /
+                            cy
+                        ) *
+                        -4;
+
+
+                    var ry =
+                        (
+                            (x - cx) /
+                            cx
+                        ) *
+                        4;
+
+
+                    card.style.transform =
+                        'translateY(-6px) perspective(800px) rotateX(' +
+                        rx +
+                        'deg) rotateY(' +
+                        ry +
+                        'deg) scale(1.01)';
+
+                }
+            );
+
+
+            card.addEventListener(
+                'mouseleave',
+                function() {
+
+                    card.style.transform =
+                        '';
+
+                }
+            );
+
+        }
+    );
+
 }
 
+
 // =============================================================
-// PARALLAX (subtle)
+// PARALLAX
 // =============================================================
+
 var pElements =
     document.querySelectorAll(
         '.about-card, .edu-card, .service, .skill, .platform, .hobby, .project-card, .contact-info-card'
     );
 
+
 var pTimeout;
+
 
 function handleParallax() {
 
-    pElements.forEach(function(el) {
+    pElements.forEach(
+        function(el) {
 
-        var rect =
-            el.getBoundingClientRect();
+            var rect =
+                el.getBoundingClientRect();
 
-        if (
-            rect.top < window.innerHeight &&
-            rect.bottom > 0
-        ) {
-
-            var yPos =
-                (
-                    rect.top +
-                    rect.height / 2 -
-                    window.innerHeight / 2
-                ) * 0.02;
 
             if (
-                window.innerWidth > 900 &&
-                !el.classList.contains('contact-info-card')
+                rect.top <
+                    window.innerHeight &&
+                rect.bottom >
+                    0
             ) {
 
-                el.style.transform =
-                    'translateY(' +
-                    (yPos * 0.3) +
-                    'px)';
+                var yPos =
+                    (
+                        rect.top +
+                        rect.height / 2 -
+                        window.innerHeight / 2
+                    ) *
+                    0.02;
+
+
+                if (
+                    window.innerWidth > 900 &&
+                    !el.classList.contains(
+                        'contact-info-card'
+                    )
+                ) {
+
+                    el.style.transform =
+                        'translateY(' +
+                        (
+                            yPos * 0.3
+                        ) +
+                        'px)';
+
+                }
+
             }
+
         }
-    });
+    );
+
 }
 
-window.addEventListener('scroll', function() {
 
-    clearTimeout(pTimeout);
+window.addEventListener(
+    'scroll',
+    function() {
 
-    pTimeout =
-        setTimeout(handleParallax, 10);
-});
+        clearTimeout(
+            pTimeout
+        );
+
+
+        pTimeout =
+            setTimeout(
+                handleParallax,
+                10
+            );
+
+    }
+);
+
 
 // =============================================================
 // LOADER
 // =============================================================
-setTimeout(function() {
 
-    var loader =
-        document.getElementById('loader');
+setTimeout(
+    function() {
 
-    if (loader) {
-        loader.classList.add('hide');
-    }
+        var loader =
+            document.getElementById(
+                'loader'
+            );
 
-}, 1000);
+
+        if (loader) {
+
+            loader.classList.add(
+                'hide'
+            );
+
+        }
+
+    },
+    1000
+);
+
+
+// =============================================================
+// CONSOLE
+// =============================================================
 
 console.log(
-    '%c🚀 Portfolio Loaded — 5 Projects, 30 Screenshots Mapped!',
+    '%c🚀 Portfolio Loaded — 7 Projects!',
     'color:#42e17b; font-size:14px;'
 );
