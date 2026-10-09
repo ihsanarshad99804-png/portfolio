@@ -261,6 +261,16 @@ const grid =
     document.getElementById('projectsGrid');
 
 
+function getAssetUrl(path) {
+
+    return path
+        .split('/')
+        .map(encodeURIComponent)
+        .join('/');
+
+}
+
+
 projectsData.forEach(function(p, idx) {
 
     const card =
@@ -321,7 +331,7 @@ projectsData.forEach(function(p, idx) {
         <div class="project-image-wrap">
 
             <img
-                src="${p.thumb}"
+                src="${getAssetUrl(p.thumb)}"
                 alt="${p.name}"
                 loading="lazy"
             />
@@ -614,7 +624,7 @@ function renderGallery(proj) {
 
 
             img.src =
-                src;
+                getAssetUrl(src);
 
 
             img.alt =
@@ -860,6 +870,108 @@ document.addEventListener(
 
 
 // =============================================================
+// SKILL CATEGORY FILTERS
+// =============================================================
+
+var skillFilters =
+    document.querySelectorAll(
+        '[data-skill-filter]'
+    );
+
+
+var skillCards =
+    document.querySelectorAll(
+        '[data-skill-category]'
+    );
+
+
+var skillFilterStatus =
+    document.getElementById(
+        'skillFilterStatus'
+    );
+
+
+skillFilters.forEach(
+    function(filterButton) {
+
+        filterButton.addEventListener(
+            'click',
+            function() {
+
+                var selectedCategory =
+                    filterButton.getAttribute(
+                        'data-skill-filter'
+                    );
+
+
+                var visibleCount =
+                    0;
+
+
+                skillCards.forEach(
+                    function(card) {
+
+                        var isVisible =
+                            selectedCategory === 'all' ||
+                            card.getAttribute(
+                                'data-skill-category'
+                            ) === selectedCategory;
+
+
+                        card.hidden =
+                            !isVisible;
+
+
+                        if (isVisible) {
+
+                            visibleCount++;
+
+
+                            card.classList.add(
+                                'active'
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                skillFilters.forEach(
+                    function(button) {
+
+                        var isSelected =
+                            button === filterButton;
+
+
+                        button.classList.toggle(
+                            'is-active',
+                            isSelected
+                        );
+
+
+                        button.setAttribute(
+                            'aria-pressed',
+                            String(isSelected)
+                        );
+
+                    }
+                );
+
+
+                skillFilterStatus.textContent =
+                    selectedCategory === 'all'
+                        ? 'Showing all ' + visibleCount + ' skill categories.'
+                        : 'Showing ' + filterButton.textContent.trim() + ' skills.';
+
+            }
+        );
+
+    }
+);
+
+
+// =============================================================
 // NAVBAR SCROLL
 // =============================================================
 
@@ -921,17 +1033,22 @@ menuBtn.addEventListener(
     'click',
     function() {
 
-        navLinks.classList.toggle(
-            'open'
+        var isOpen =
+            navLinks.classList.toggle(
+                'open'
+            );
+
+
+        menuBtn.setAttribute(
+            'aria-expanded',
+            String(isOpen)
         );
 
 
         menuBtn.textContent =
-            navLinks.classList.contains(
-                'open'
-            )
-                ? '✕'
-                : '☰';
+            isOpen
+                ? '\u00d7'
+                : '\u2630';
 
     }
 );
@@ -951,8 +1068,14 @@ navLinks
                     );
 
 
+                    menuBtn.setAttribute(
+                        'aria-expanded',
+                        'false'
+                    );
+
+
                     menuBtn.textContent =
-                        '☰';
+                        '\u2630';
 
                 }
             );
@@ -1539,4 +1662,181 @@ setTimeout(
 console.log(
     '%c🚀 Portfolio Loaded — 7 Projects!',
     'color:#42e17b; font-size:14px;'
+);
+
+
+// =============================================================
+// WELCOME SCREEN
+// =============================================================
+
+var welcomeScreen =
+    document.getElementById(
+        'welcomeScreen'
+    );
+
+
+var enterPortfolioButton =
+    document.getElementById(
+        'enterPortfolio'
+    );
+
+
+var welcomeVoice =
+    document.getElementById(
+        'welcomeVoice'
+    );
+
+
+var welcomeHint =
+    document.querySelector(
+        '.welcome-hint'
+    );
+
+
+window.scrollTo(
+    0,
+    0
+);
+
+
+enterPortfolioButton.addEventListener(
+    'click',
+    function() {
+
+        welcomeVoice.currentTime =
+            0;
+
+
+        var voicePlayback =
+            welcomeVoice.play();
+
+
+        if (
+            voicePlayback &&
+            typeof voicePlayback.then === 'function'
+        ) {
+
+            voicePlayback.then(
+                function() {
+
+                    welcomeHint.classList.remove(
+                        'has-voice-error'
+                    );
+
+
+                    welcomeHint.classList.add(
+                        'is-speaking'
+                    );
+
+
+                    welcomeHint.textContent =
+                        'Welcome to my portfolio.';
+
+                }
+            ).catch(
+                function() {
+
+                    welcomeHint.classList.remove(
+                        'is-speaking'
+                    );
+
+
+                    welcomeHint.classList.add(
+                        'has-voice-error'
+                    );
+
+
+                    welcomeHint.textContent =
+                        'Voice welcome could not play. Please check your device audio.';
+
+                }
+            );
+
+        }
+
+
+        welcomeVoice.onended =
+            function() {
+
+                welcomeHint.classList.remove(
+                    'is-speaking'
+                );
+
+            };
+
+
+        welcomeVoice.onerror =
+            function() {
+
+                welcomeHint.classList.remove(
+                    'is-speaking'
+                );
+
+
+                welcomeHint.classList.add(
+                    'has-voice-error'
+                );
+
+
+                welcomeHint.textContent =
+                    'Voice welcome audio could not be loaded.';
+
+            };
+
+
+        window.scrollTo(
+            0,
+            0
+        );
+
+
+        document.body.classList.remove(
+            'intro-locked'
+        );
+
+
+        var portfolioSurface =
+            document.querySelectorAll(
+                '#navbar, main, footer'
+            );
+
+
+        portfolioSurface.forEach(
+            function(surface) {
+
+                surface.removeAttribute(
+                    'inert'
+                );
+
+
+                surface.removeAttribute(
+                    'aria-hidden'
+                );
+
+            }
+        );
+
+
+        welcomeScreen.classList.add(
+            'is-leaving'
+        );
+
+
+        document
+            .querySelector('.hero h1')
+            .focus({
+                preventScroll: true
+            });
+
+
+        window.setTimeout(
+            function() {
+
+                welcomeScreen.remove();
+
+            },
+            750
+        );
+
+    }
 );

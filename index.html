@@ -10,11 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="intro-locked">
+
+    <section class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle">
+        <div class="welcome-content">
+            <div class="welcome-portrait">
+                <img src="2ndpro.pic.png" alt="Ihsan Arshad" fetchpriority="high" />
+                <span class="welcome-ring" aria-hidden="true"></span>
+            </div>
+            <p class="welcome-eyebrow">Full Stack Developer <span>·</span> Graphic Designer <span>·</span> Digital Marketer</p>
+            <h1 id="welcomeTitle">Ihsan Arshad</h1>
+            <p class="welcome-intro">Welcome to my portfolio</p>
+            <button class="welcome-enter" id="enterPortfolio" type="button">
+                <span>Enter Portfolio</span><span aria-hidden="true">↗</span>
+            </button>
+            <p class="welcome-hint">Click to enter with voice welcome</p>
+        </div>
+    </section>
+    <audio id="welcomeVoice" src="welcome-voice.wav" preload="auto"></audio>
 
     <!-- LOADER -->
     <div class="loader" id="loader">
-        <div class="loader-logo">IG<span>.</span></div>
+        <div class="loader-logo">IA<span>.</span></div>
     </div>
 
     <!-- BACKGROUND -->
@@ -31,48 +48,64 @@
     <!-- ============================================================
     NAVBAR
     ============================================================ -->
-    <nav id="navbar">
+    <nav id="navbar" inert aria-hidden="true">
         <div class="nav-inner">
-            <a href="#home" class="logo">IG<span>.</span></a>
+            <a href="#home" class="logo">IHSAN ARSHAD</a>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact" class="nav-btn">Let's Talk</a></li>
             </ul>
 
-            <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
         </div>
     </nav>
 
     <!-- ============================================================
     MAIN
     ============================================================ -->
-    <main>
+    <main inert aria-hidden="true">
 
         <!-- HERO -->
         <section class="hero" id="home">
             <div class="container">
-                <div class="hero-content">
-                    <div class="available reveal">
-                        <span class="dot"></span>
-                        Available for creative projects
+                <div class="hero-layout">
+                    <div class="hero-content">
+                        <div class="available reveal">
+                            <span class="dot"></span>
+                            Available for creative projects
+                        </div>
+
+                        <p class="hero-kicker reveal delay-1">Full Stack Developer <span>·</span> Graphic Designer <span>·</span> Digital Marketer</p>
+
+                        <h1 class="reveal delay-1" tabindex="-1">
+                            Hi, I'm <span class="gradient">Ihsan Arshad.</span><br />
+                            I Design. I Build.
+                        </h1>
+
+                        <p class="hero-text reveal delay-2">
+                            Full Stack Developer, Graphic Designer, Digital Marketer &amp; Freelancer building modern digital experiences with code and creativity.
+                        </p>
+
+                        <div class="hero-buttons reveal delay-3">
+                            <a href="#projects" class="btn btn-primary">View My Work <span aria-hidden="true">↗</span></a>
+                            <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
+                        </div>
                     </div>
 
-                    <h1 class="reveal delay-1">
-                        Hi, I'm <span class="gradient">Ihsan Arshad.</span><br />
-                        I Design. I Build.
-                    </h1>
-
-                    <p class="hero-text reveal delay-2">
-                        Full Stack Developer, Graphic Designer &amp; Freelancer building modern digital experiences with code and creativity.
-                    </p>
-
-                    <div class="hero-buttons reveal delay-3">
-                        <a href="#projects" class="btn btn-primary">View My Work →</a>
-                        <a href="#contact" class="btn btn-secondary">Let's Work Together</a>
+                    <div class="hero-visual reveal delay-2">
+                        <div class="hero-image-frame">
+                            <img src="2ndpro.pic.png" alt="Ihsan Arshad, Full Stack Developer and Graphic Designer" fetchpriority="high" />
+                        </div>
+                        <div class="hero-image-glow"></div>
+                        <div class="hero-note">
+                            <span class="hero-note-mark" aria-hidden="true">3+</span>
+                            <span><strong>3+ Years Experience</strong></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,7 +119,7 @@
                 <div class="stats-grid">
                     <div class="stat reveal">
                         <div class="stat-number">3<span>+</span></div>
-                        <small>Years Learning &amp; Experience</small>
+                        <small>Years of Experience</small>
                     </div>
 
                     <div class="stat reveal delay-1">
@@ -112,13 +145,18 @@
             <div class="container">
                 <div class="about-grid">
 
-                    <div class="about-card reveal">
-                        <img
-                            src="2.jpeg"
-                            alt="Ihsan Arshad — Full Stack Developer"
-                            class="profile-image"
-                        />
-                        <div class="about-overlay"></div>
+                    <div class="about-side reveal">
+                        <div class="about-portrait">
+                            <img src="2.png" alt="Ihsan Arshad" loading="lazy" />
+                        </div>
+                        <span class="about-side-label">A little about my work</span>
+                        <div class="about-specialties">
+                            <div><span>01</span><strong>Full Stack Development</strong></div>
+                            <div><span>02</span><strong>Web Design</strong></div>
+                            <div><span>03</span><strong>Graphic Design</strong></div>
+                            <div><span>04</span><strong>Freelance Projects</strong></div>
+                        </div>
+                        <a class="about-side-link" href="#projects">Explore selected work <span aria-hidden="true">↗</span></a>
                     </div>
 
                     <div class="about-text">
@@ -132,7 +170,7 @@
                         </h2>
 
                         <p class="reveal">
-                            Hi, I'm Ihsan Arshad. I work across Full Stack Development, Web Development, Graphic Design, and Freelancing, combining technical problem-solving with creative design to build complete web solutions and professional visual experiences.
+                            Hi, I'm Ihsan Arshad. I work across Full Stack Development, Web Development, Graphic Design, Digital Marketing, and Freelancing, combining technical problem-solving with creative design and marketing to build complete digital experiences.
                         </p>
 
                         <p class="reveal">
@@ -144,7 +182,7 @@
                         </p>
 
                         <p class="reveal">
-                                I also connect with clients and peers through Upwork Fiverr and LinkedIn while continuously learning and improving my abilities.
+                                I also connect with clients and peers through Fiverr and LinkedIn while continuously learning and improving my abilities.
                         </p>
 
                         <div class="about-highlight reveal">
@@ -171,12 +209,80 @@
                 </h2>
 
                 <p class="section-desc reveal">
-                    From responsive interfaces and backend services to databases, APIs, and deployment.
+                    Browse all my skills or choose a category to explore specific areas.
                 </p>
 
-                <div class="skills-wrap">
+                <div class="skills-marquee reveal" aria-label="Technology, design and digital marketing skills">
+                    <div class="skills-marquee-track">
+                        <div class="skills-marquee-group">
+                            <span class="skill-chip"><b>HTML</b>HTML5</span>
+                            <span class="skill-chip"><b>CSS</b>CSS3</span>
+                            <span class="skill-chip"><b>JS</b>JavaScript</span>
+                            <span class="skill-chip"><b>TS</b>TypeScript</span>
+                            <span class="skill-chip"><b>Re</b>React</span>
+                            <span class="skill-chip"><b>Nx</b>Next.js</span>
+                            <span class="skill-chip"><b>TW</b>Tailwind CSS</span>
+                            <span class="skill-chip"><b>Node</b>Node.js</span>
+                            <span class="skill-chip"><b>Ex</b>Express.js</span>
+                            <span class="skill-chip"><b>API</b>REST APIs</span>
+                            <span class="skill-chip"><b>Auth</b>Authentication</span>
+                            <span class="skill-chip"><b>DB</b>MongoDB</span>
+                            <span class="skill-chip"><b>SQL</b>MySQL</span>
+                            <span class="skill-chip"><b>Git</b>Git &amp; GitHub</span>
+                            <span class="skill-chip"><b>VS</b>VS Code</span>
+                            <span class="skill-chip"><b>npm</b>npm &amp; Postman</span>
+                            <span class="skill-chip"><b>Web</b>Hosting &amp; Deployment</span>
+                            <span class="skill-chip"><b>Ps</b>Photoshop</span>
+                            <span class="skill-chip"><b>Ai</b>Illustrator</span>
+                            <span class="skill-chip"><b>Canva</b>Canva</span>
+                            <span class="skill-chip"><b>Fg</b>Figma</span>
+                            <span class="skill-chip"><b>SEO</b>Digital Marketing</span>
+                            <span class="skill-chip"><b>SM</b>Social Media</span>
+                        </div>
+                        <div class="skills-marquee-group" aria-hidden="true">
+                            <span class="skill-chip"><b>HTML</b>HTML5</span>
+                            <span class="skill-chip"><b>CSS</b>CSS3</span>
+                            <span class="skill-chip"><b>JS</b>JavaScript</span>
+                            <span class="skill-chip"><b>TS</b>TypeScript</span>
+                            <span class="skill-chip"><b>Re</b>React</span>
+                            <span class="skill-chip"><b>Nx</b>Next.js</span>
+                            <span class="skill-chip"><b>TW</b>Tailwind CSS</span>
+                            <span class="skill-chip"><b>Node</b>Node.js</span>
+                            <span class="skill-chip"><b>Ex</b>Express.js</span>
+                            <span class="skill-chip"><b>API</b>REST APIs</span>
+                            <span class="skill-chip"><b>Auth</b>Authentication</span>
+                            <span class="skill-chip"><b>DB</b>MongoDB</span>
+                            <span class="skill-chip"><b>SQL</b>MySQL</span>
+                            <span class="skill-chip"><b>Git</b>Git &amp; GitHub</span>
+                            <span class="skill-chip"><b>VS</b>VS Code</span>
+                            <span class="skill-chip"><b>npm</b>npm &amp; Postman</span>
+                            <span class="skill-chip"><b>Web</b>Hosting &amp; Deployment</span>
+                            <span class="skill-chip"><b>Ps</b>Photoshop</span>
+                            <span class="skill-chip"><b>Ai</b>Illustrator</span>
+                            <span class="skill-chip"><b>Canva</b>Canva</span>
+                            <span class="skill-chip"><b>Fg</b>Figma</span>
+                            <span class="skill-chip"><b>SEO</b>Digital Marketing</span>
+                            <span class="skill-chip"><b>SM</b>Social Media</span>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="skill reveal">
+                <div class="skill-filters reveal" role="group" aria-label="Filter skills by category">
+                    <button class="skill-filter is-active" type="button" data-skill-filter="all" aria-pressed="true">All</button>
+                    <button class="skill-filter" type="button" data-skill-filter="frontend" aria-pressed="false">Frontend</button>
+                    <button class="skill-filter" type="button" data-skill-filter="backend" aria-pressed="false">Backend</button>
+                    <button class="skill-filter" type="button" data-skill-filter="apis" aria-pressed="false">APIs</button>
+                    <button class="skill-filter" type="button" data-skill-filter="database" aria-pressed="false">Database</button>
+                    <button class="skill-filter" type="button" data-skill-filter="tools" aria-pressed="false">Tools</button>
+                    <button class="skill-filter" type="button" data-skill-filter="development" aria-pressed="false">Development</button>
+                    <button class="skill-filter" type="button" data-skill-filter="hosting" aria-pressed="false">Hosting &amp; Deployment</button>
+                    <button class="skill-filter" type="button" data-skill-filter="design" aria-pressed="false">Design</button>
+                </div>
+                <p class="skill-filter-status" id="skillFilterStatus" aria-live="polite">Showing all 8 skill categories.</p>
+
+                <div class="skills-wrap" id="skillsGrid">
+
+                    <div class="skill reveal" data-skill-category="frontend">
                         <h3 class="skill-name">Frontend</h3>
                         <ul class="skill-list">
                             <li>HTML5</li>
@@ -190,20 +296,27 @@
                         </ul>
                     </div>
 
-                    <div class="skill reveal delay-1">
-                        <h3 class="skill-name">Backend &amp; APIs</h3>
+                    <div class="skill reveal delay-1" data-skill-category="backend">
+                        <h3 class="skill-name">Backend</h3>
                         <ul class="skill-list">
                             <li>Node.js</li>
                             <li>Express.js</li>
-                            <li>REST APIs</li>
-                            <li>API Integration</li>
                             <li>Authentication</li>
                             <li>Authorization</li>
                             <li>Server-side Development</li>
                         </ul>
                     </div>
 
-                    <div class="skill reveal delay-1">
+                    <div class="skill reveal delay-1" data-skill-category="apis">
+                        <h3 class="skill-name">APIs</h3>
+                        <ul class="skill-list">
+                            <li>REST API Development</li>
+                            <li>API Integration</li>
+                            <li>Connecting Frontend &amp; Backend</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill reveal delay-1" data-skill-category="database">
                         <h3 class="skill-name">Database</h3>
                         <ul class="skill-list">
                             <li>MongoDB</li>
@@ -214,8 +327,8 @@
                         </ul>
                     </div>
 
-                    <div class="skill reveal delay-2">
-                        <h3 class="skill-name">Tools &amp; Development</h3>
+                    <div class="skill reveal delay-2" data-skill-category="tools">
+                        <h3 class="skill-name">Development Tools</h3>
                         <ul class="skill-list">
                             <li>Git</li>
                             <li>GitHub</li>
@@ -225,7 +338,17 @@
                         </ul>
                     </div>
 
-                    <div class="skill reveal">
+                    <div class="skill reveal" data-skill-category="development">
+                        <h3 class="skill-name">Development</h3>
+                        <ul class="skill-list">
+                            <li>Responsive Web Design</li>
+                            <li>Full Stack Development</li>
+                            <li>Server-side Development</li>
+                            <li>CRUD Operations</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill reveal" data-skill-category="hosting">
                         <h3 class="skill-name">Hosting &amp; Deployment</h3>
                         <ul class="skill-list">
                             <li>Hosting Setup</li>
@@ -236,29 +359,7 @@
                         </ul>
                     </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- GRAPHIC DESIGN SKILLS -->
-        <section id="design-skills">
-            <div class="container">
-
-                <div class="section-label reveal">
-                    Graphic Design
-                </div>
-
-                <h2 class="section-title reveal">
-                    Thoughtful visuals, <span>built with purpose.</span>
-                </h2>
-
-                <p class="section-desc reveal">
-                    A selection of tools I use in my graphic design work.
-                </p>
-
-                <div class="skills-wrap">
-
-                    <div class="skill reveal">
+                    <div class="skill reveal" data-skill-category="design">
                         <h3 class="skill-name">Design Tools</h3>
                         <ul class="skill-list">
                             <li>Adobe Photoshop</li>
@@ -514,6 +615,18 @@
                             <span class="platform-arrow">↗</span>
                         </a>
 
+                        <span class="platform-divider">•</span>
+
+                        <a
+                            href="https://www.behance.net/ihsanarshad"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="platform-link"
+                        >
+                            <span class="platform-name">Behance</span>
+                            <span class="platform-arrow">↗</span>
+                        </a>
+
                     </div>
 
                     <p class="online-subtitle">
@@ -541,13 +654,13 @@
 
                     <a
                         class="project-card certificate-card reveal"
-                        href="CERTIFICATE%27s/Full-Stack%20Developer%20Certificate.png"
+                        href="CERTIFICATE's/Full-Stack Developer Certificate.png"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="View Full-Stack Developer Certificate at full size"
                     >
                         <div class="project-image-wrap">
-                            <img class="certificate-preview" src="CERTIFICATE%27s/Full-Stack%20Developer%20Certificate.png" alt="Full-Stack Developer Certificate" loading="lazy" />
+                            <img class="certificate-preview" src="CERTIFICATE's/Full-Stack Developer Certificate.png" alt="Full-Stack Developer Certificate" loading="lazy" />
                         </div>
                         <div class="project-meta">
                             <h3>Full-Stack Developer Certificate</h3>
@@ -557,13 +670,13 @@
 
                     <a
                         class="project-card certificate-card reveal delay-1"
-                        href="CERTIFICATE%27s/WEB%20DESIGINING%20CERTIFICATE.png"
+                        href="CERTIFICATE's/WEB DESIGINING CERTIFICATE.png"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="View Web Designing Certificate at full size"
                     >
                         <div class="project-image-wrap">
-                            <img class="certificate-preview" src="CERTIFICATE%27s/WEB%20DESIGINING%20CERTIFICATE.png" alt="Web Designing Certificate" loading="lazy" />
+                            <img class="certificate-preview" src="CERTIFICATE's/WEB DESIGINING CERTIFICATE.png" alt="Web Designing Certificate" loading="lazy" />
                         </div>
                         <div class="project-meta">
                             <h3>Web Designing Certificate</h3>
@@ -573,13 +686,13 @@
 
                     <a
                         class="project-card certificate-card reveal delay-2"
-                        href="CERTIFICATE%27s/DigitalMarketing%20Certificate.png"
+                        href="CERTIFICATE's/DigitalMarketing Certificate.png"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="View Digital Marketing Certificate at full size"
                     >
                         <div class="project-image-wrap">
-                            <img class="certificate-preview" src="CERTIFICATE%27s/DigitalMarketing%20Certificate.png" alt="Digital Marketing Certificate" loading="lazy" />
+                            <img class="certificate-preview" src="CERTIFICATE's/DigitalMarketing Certificate.png" alt="Digital Marketing Certificate" loading="lazy" />
                         </div>
                         <div class="project-meta">
                             <h3>Digital Marketing Certificate</h3>
@@ -622,7 +735,7 @@
                             <div class="ci-content">
                                 <span class="ci-label">Profession</span>
                                 <span class="ci-value">
-                                    Full Stack Developer · Graphic Designer · Freelancer
+                                    Full Stack Developer · Graphic Designer · Digital Marketer · Freelancer
                                 </span>
                             </div>
                         </div>
@@ -694,14 +807,12 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer inert aria-hidden="true">
         <div class="container">
 
             <div class="footer-inner">
 
-                <div class="footer-logo">
-                    IG<span>.</span>
-                </div>
+                <div class="footer-logo">IHSAN ARSHAD</div>
 
                 <p>
                     &copy; 2026 Ihsan Arshad. All rights reserved.
